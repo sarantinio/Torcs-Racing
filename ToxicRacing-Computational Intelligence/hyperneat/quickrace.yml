@@ -1,0 +1,8 @@
+players:
+    student:
+      working_dir: /home/student/Documents/CI/ToxicRacing
+controller:
+  torcs_config_file: quickrace.xml
+rater:
+  filename: ./ratings.csv
+start_command: './start.sh -p 3001'

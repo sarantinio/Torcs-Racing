@@ -1,0 +1,37 @@
+2017-11-09 16:59:58,813    INFO pytocl.protocol Registering driver client with server ('localhost', 3001).
+2017-11-09 16:59:58,814    INFO pytocl.protocol Registering client.
+Process ForkPoolWorker-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/multiprocessing/process.py", line 249, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.5/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.5/multiprocessing/pool.py", line 119, in worker
+    result = (True, func(*args, **kwds))
+  File "./start.sh", line 23, in eval_genome
+    main(MyDriver(net=net))
+  File "/home/student/Documents/CI/ToxicRacing/pytocl/main.py", line 42, in main
+    client.run()
+  File "/home/student/Documents/CI/ToxicRacing/pytocl/protocol.py", line 58, in run
+    self._register_driver()
+  File "/home/student/Documents/CI/ToxicRacing/pytocl/protocol.py", line 110, in _register_driver
+    buffer, _ = self.socket.recvfrom(TO_SOCKET_MSEC)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "./start.sh", line 75, in <module>
+    run()
+  File "./start.sh", line 49, in run
+    winner = pop.run(pe.evaluate)
+  File "/home/student/Documents/CI/ToxicRacing/neat/population.py", line 89, in run
+    fitness_function(list(iteritems(self.population)), self.config)
+  File "/home/student/Documents/CI/ToxicRacing/neat/parallel.py", line 30, in evaluate
+    genome.fitness = job.get(timeout=self.timeout)
+  File "/usr/lib/python3.5/multiprocessing/pool.py", line 602, in get
+    self.wait(timeout)
+  File "/usr/lib/python3.5/multiprocessing/pool.py", line 599, in wait
+    self._event.wait(timeout)
+  File "/usr/lib/python3.5/threading.py", line 549, in wait
+    signaled = self._cond.wait(timeout)
+  File "/usr/lib/python3.5/threading.py", line 293, in wait
+    waiter.acquire()
+KeyboardInterrupt

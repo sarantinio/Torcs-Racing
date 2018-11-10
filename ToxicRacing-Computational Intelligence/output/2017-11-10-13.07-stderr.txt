@@ -1,0 +1,55 @@
+INFO:root:Racing: 'student'
+INFO:root:Starting TORCS...
+INFO:root:Starting players...
+ERROR:root:An error occurred, trying to stop gracefully...
+INFO:root:Terminating psutil.Popen(pid=5861, name='python3')
+INFO:root:Closed all files and processes!
+Traceback (most recent call last):
+  File "./torcs_tournament.py", line 1039, in <module>
+    controller.race_and_save(simulate=args.simulate)
+  File "./torcs_tournament.py", line 394, in race_and_save
+    self.race(simulate=simulate)
+  File "./torcs_tournament.py", line 409, in race
+    self.race_once(players, simulate=simulate)
+  File "./torcs_tournament.py", line 907, in race_once
+    **kwargs
+  File "./torcs_tournament.py", line 558, in race_once
+    list(proc.args) or name
+subprocess.CalledProcessError: Command '['torcs', '-r', '/home/student/Documents/CI/ToxicRacing/quickrace.xml']' returned non-zero exit status 0
+2017-11-10 13:08:04,161    INFO pytocl.protocol Registering driver client with server ('localhost', 3001).
+2017-11-10 13:08:04,161    INFO pytocl.protocol Registering client.
+2017-11-10 13:12:42,612    INFO pytocl.protocol Connection successful.
+2017-11-10 13:12:44,899    INFO pytocl.protocol Disconnecting from racing server.
+2017-11-10 13:12:44,967    INFO pytocl.protocol Client stopped.
+Process ForkPoolWorker-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/multiprocessing/pool.py", line 125, in worker
+    put((job, i, result))
+  File "/usr/lib/python3.5/multiprocessing/queues.py", line 355, in put
+    self._writer.send_bytes(obj)
+  File "/usr/lib/python3.5/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/usr/lib/python3.5/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.5/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/multiprocessing/process.py", line 249, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.5/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.5/multiprocessing/pool.py", line 130, in worker
+    put((job, i, (False, wrapped)))
+  File "/usr/lib/python3.5/multiprocessing/queues.py", line 355, in put
+    self._writer.send_bytes(obj)
+  File "/usr/lib/python3.5/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/usr/lib/python3.5/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.5/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe

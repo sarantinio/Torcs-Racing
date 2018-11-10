@@ -1,0 +1,37 @@
+INFO:root:Racing: 'student'
+INFO:root:Starting TORCS...
+INFO:root:Starting players...
+ERROR:root:An error occurred, trying to stop gracefully...
+INFO:root:Terminating psutil.Popen(pid=15981, name='python3')
+INFO:root:Closed all files and processes!
+Traceback (most recent call last):
+  File "./torcs_tournament.py", line 1039, in <module>
+    controller.race_and_save(simulate=args.simulate)
+  File "./torcs_tournament.py", line 394, in race_and_save
+    self.race(simulate=simulate)
+  File "./torcs_tournament.py", line 409, in race
+    self.race_once(players, simulate=simulate)
+  File "./torcs_tournament.py", line 907, in race_once
+    **kwargs
+  File "./torcs_tournament.py", line 558, in race_once
+    list(proc.args) or name
+subprocess.CalledProcessError: Command '['torcs', '-r', '/home/student/Documents/CI/ToxicRacing/quickrace.xml']' returned non-zero exit status 0
+2017-11-09 17:46:03,783    INFO pytocl.protocol Registering driver client with server ('localhost', 3001).
+2017-11-09 17:46:03,784    INFO pytocl.protocol Registering client.
+Process ForkPoolWorker-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/multiprocessing/process.py", line 249, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.5/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.5/multiprocessing/pool.py", line 119, in worker
+    result = (True, func(*args, **kwds))
+  File "./start.sh", line 24, in eval_genome
+    main(MyDriver(net=net))
+  File "/home/student/Documents/CI/ToxicRacing/pytocl/main.py", line 42, in main
+    client.run()
+  File "/home/student/Documents/CI/ToxicRacing/pytocl/protocol.py", line 58, in run
+    self._register_driver()
+  File "/home/student/Documents/CI/ToxicRacing/pytocl/protocol.py", line 110, in _register_driver
+    buffer, _ = self.socket.recvfrom(TO_SOCKET_MSEC)
+KeyboardInterrupt

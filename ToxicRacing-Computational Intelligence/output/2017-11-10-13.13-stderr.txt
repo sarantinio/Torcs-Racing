@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "./start.sh", line 77, in <module>
+    run()
+  File "./start.sh", line 50, in run
+   INFO:root:Terminating psutil.Popen(pid=16959, name='python3')
+INFO:root:Closed all files and processes!
+INFO:root:Saving ratings in ./ratings.csv
+INFO:root:Done!
+2017-11-10 13:14:37,276    INFO pytocl.protocol Registering driver client with server ('localhost', 3001).
+2017-11-10 13:14:37,277    INFO pytocl.protocol Registering client.
+in race
+    self.race_once(players, simulate=simulate)
+  File "./torcs_tournament.py", line 907, in race_once
+    **kwargs
+  File "./torcs_tournament.py", line 558, in race_once
+    list(proc.args) or name
+subprocess.CalledProcessError: Command '['torcs', '-r', '/home/student/Documents/CI/ToxicRacing/quickrace.xml']' returned non-zero exit status 0
+2017-11-10 13:14:01,474    INFO pytocl.protocol Registering driver client with server ('localhost', 3001).
+2017-11-10 13:14:01,474    INFO pytocl.protocol Registering client.
+1-10 13:14:00,537    INFO pytocl.protocol Registering client.
+nnot allocate memory
+Exception ignored in: <bound method ParallelEvaluator.__del__ of <neat.parallel.ParallelEvaluator object at 0x7fe766fb8240>>
+Traceback (most recent call last):
+  File "/home/student/Documents/CI/ToxicRacing/neat/parallel.py", line 20, in __del__
+    self.pool.close() # should this be terminate?
+AttributeError: 'ParallelEvaluator' object has no attribute 'pool'

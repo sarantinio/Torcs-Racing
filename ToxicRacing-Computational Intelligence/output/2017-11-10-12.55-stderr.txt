@@ -1,0 +1,22 @@
+INFO:root:Racing: 'student'
+INFO:root:Starting TORCS...
+INFO:root:Starting players...
+INFO:root:Waiting for TORCS to finish...
+INFO:root:Terminating psutil.Popen(pid=11221, name='python3')
+INFO:root:Closed all files and processes!
+Traceback (most recent call last):
+  File "./torcs_tournament.py", line 1039, in <module>
+    controller.race_and_save(simulate=args.simulate)
+  File "./torcs_tournament.py", line 394, in race_and_save
+    self.race(simulate=simulate)
+  File "./torcs_tournament.py", line 409, in race
+    self.race_once(players, simulate=simulate)
+  File "./torcs_tournament.py", line 907, in race_once
+    **kwargs
+  File "./torcs_tournament.py", line 648, in race_once
+    os.path.basename(server_stdout.name)
+  File "/usr/lib/python3.5/shutil.py", line 114, in copyfile
+    with open(src, 'rb') as fsrc:
+FileNotFoundError: [Errno 2] No such file or directory: '2017-11-10-12.55-server_out.txt'
+2017-11-10 12:56:54,081    INFO pytocl.protocol Registering driver client with server ('localhost', 3001).
+2017-11-10 12:56:54,081    INFO pytocl.protocol Registering client.
